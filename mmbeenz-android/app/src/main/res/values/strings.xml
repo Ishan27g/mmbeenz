@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">MMbeenz</string>
+    <string name="signup_btn_label">Signup</string>
+    <string name="login_btn_label">Login</string>
+    <string name="homepage_title">Meow Meow Beenz</string>
+    <string name="dummyText">android:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+        android:layout_widthandroid:layout_widthandroid:layout_width\nandroid:layout_widthandroid:layout_widthandroid:layout_width
+    </string>
+    <string name="username_hint">Enter username</string>
+    <string name="password_hint">Enter password</string>
+    <string name="Font1">casual</string>
+    <string name="meowmeowbeenz">meowmeowbeenz</string>
+    <string name="loginText">Login</string>
+    <string name="signupText">SignUp</string>
+</resources>

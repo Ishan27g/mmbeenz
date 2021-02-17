@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homepage_title_size">30sp</dimen>
+    <dimen name="homepage_text_size">26sp</dimen>
+    <dimen name="padding_title">8dp</dimen>
+    <dimen name="margin_title">16dp</dimen>
+
+    <dimen name="padding_signupLogin">8dp</dimen>
+    <dimen name="margin_signupLogin">16dp</dimen>
+    <dimen name="center_text_input">300dp</dimen>
+    <dimen name="button_padding">10dp</dimen>
+    <dimen name="button_margin">10dp</dimen>
+    <dimen name="font1Size">18sp</dimen>
+    <dimen name="genericTextSize">22sp</dimen>
+    <dimen name="ImagePadding">8dp</dimen>
+    <dimen name="image_margin">5dp</dimen>
+</resources>

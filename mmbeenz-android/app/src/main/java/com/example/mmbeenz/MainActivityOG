@@ -1,0 +1,37 @@
+package com.example.mmbeenz
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import org.w3c.dom.Text
+
+class MainActivityOG : AppCompatActivity() {
+
+    lateinit var signupBtn: Button
+    lateinit var loginBtn: Button
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        signupBtn  = findViewById(R.id.signup_button)
+        loginBtn = findViewById(R.id.login_button)
+
+        signupBtn.setOnClickListener{ signUpHandler()}
+        loginBtn.setOnClickListener{ loginHandler()}
+
+    }
+    private fun signUpHandler(){
+       // Toast.makeText(this, "okokokok ok ok", Toast.LENGTH_SHORT).show()
+        var displayText: TextView = findViewById(R.id.text_display)
+        displayText.text = "signup"
+    }
+    private fun loginHandler(){
+        // Toast.makeText(this, "okokokok ok ok", Toast.LENGTH_SHORT).show()
+        var displayText: TextView = findViewById(R.id.text_display)
+        displayText.text = "login"
+    }
+}
+
