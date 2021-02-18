@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
+import com.squareup.picasso.Picasso
 import org.json.JSONArray
 
 class HomeActivity : AppCompatActivity() {
@@ -63,7 +64,9 @@ class HomeActivity : AppCompatActivity() {
     private fun parseToUserObject(response: JSONArray): Boolean{
         for (i in 0 until response.length()){
             val user = response.getJSONObject(i)
-            allUsers.add(UserItem(1,user.optString("username"), user.getInt("rating")))
+
+
+            allUsers.add(UserItem(user.optString("username"), user.getInt("rating")))
         }
         return (allUsers.size > 0)
     }

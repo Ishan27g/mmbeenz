@@ -18,6 +18,7 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONArray
+import java.security.MessageDigest
 
 class SignupActivity : AppCompatActivity() {
 
@@ -49,7 +50,8 @@ class SignupActivity : AppCompatActivity() {
     }
     private fun signUpHandler(){
         username = usernameView.text.toString()
-        password = passwordView.text.toString() // add a hash function
+        password = passwordView.text.toString()//.sha512()
+
 
 
         // Hide the keyboard.
@@ -105,3 +107,12 @@ class SignupActivity : AppCompatActivity() {
 
 }
 
+fun String.sha512(): String {
+    return this.hashWithAlgorithm("SHA-512")
+}
+
+private fun String.hashWithAlgorithm(algorithm: String): String {
+    val digest = MessageDigest.getInstance(algorithm)
+    val bytes = digest.digest(this.toByteArray(Charsets.UTF_8))
+    return bytes.fold("", { str, it -> str + "%02x".format(it) })
+}

@@ -10,6 +10,8 @@ import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.auth.*
 import io.ktor.gson.*
+import io.ktor.http.content.*
+import java.security.MessageDigest
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
@@ -58,6 +60,9 @@ fun Application.module() {
 
 
     routing {
+        static("image"){
+            files("resources/profiles")
+        }
         post("/register") {
             val userName: String? = call.request.queryParameters["username"]
             val password: String? = call.request.queryParameters["password"]
@@ -96,6 +101,7 @@ fun Application.module() {
                         call.respond(mapOf("error" to "user not rated"))
                 } else call.respond(mapOf("error" to "user/rating param not found"))
             }
+
         }
     }
 }
@@ -103,3 +109,4 @@ data class UserData(val username: String, val rating : Int)
 fun fillUserData(user: User) : UserData{
     return UserData(user.username, user.getRating())
 }
+

@@ -26,7 +26,6 @@
             android:layout_toEndOf="@id/user_image_view"
             android:textSize="22sp"
             android:textStyle="bold"
-            android:text="Name"
             style="@style/ContentStyle"
             />
 
@@ -35,7 +34,7 @@
             android:layout_width="70dp"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@id/user_name_view"
-            android:layout_marginStart="80dp"
+            android:layout_marginStart="70dp"
             android:layout_toEndOf="@+id/user_name_view"
             android:textSize="20sp"
             android:textStyle="bold" />
