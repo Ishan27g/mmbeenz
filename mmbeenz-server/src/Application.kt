@@ -19,11 +19,12 @@ fun Application.module() {
 
     var allUser= UserList()
 
+    /*Sample data for testing only */
     allUser.setSampleData()
-    var testUsers = allUser.getAllUsers()
-    testUsers?.iterator()?.forEach { user ->
+    /*var testUsers = allUser.getAllUsers()
+     testUsers?.iterator()?.forEach { user ->
         println("${user.username} : " + user.getRating())
-    }
+    }*/
 
     install(CallLogging) {
         level = Level.INFO
@@ -102,4 +103,3 @@ data class UserData(val username: String, val rating : Int)
 fun fillUserData(user: User) : UserData{
     return UserData(user.username, user.getRating())
 }
-
