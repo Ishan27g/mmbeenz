@@ -56,31 +56,13 @@ class SignupActivity : AppCompatActivity() {
 
         // Hide the keyboard.
         hideKeyboard(currentFocus ?: View(this))
-/*
-        var imageIntent = Intent(Intent.ACTION_GET_CONTENT);
-        imageIntent.type = "image/*"
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST)
- */*/
-        var queue= Volley.newRequestQueue(this)
-        val host ="http://10.0.2.2:7000"
 
-        val stringRequest = StringRequest(Request.Method.POST, "$host/register?username=$username&password=$password",
-            { response ->
-                println("received rsp : $response")
-                Toast.makeText(this, "Registered as: $username", Toast.LENGTH_LONG).show()
+        val uploadImageIntent = Intent(this@SignupActivity, ImagePick::class.java)
+        uploadImageIntent.putExtra("username", username)
+        uploadImageIntent.putExtra("password", password)
+        startActivity(uploadImageIntent)
 
-                val homePageIntent = Intent(this@SignupActivity, HomeActivity::class.java)
-                homePageIntent.putExtra("username", username)
-                homePageIntent.putExtra("password", password)
-                startActivity(homePageIntent)
-            },
-            { error ->
-                println("Error : %s".format(error.message.toString()))
-                Toast.makeText(this, "Error : %s".format(error.message.toString()), Toast.LENGTH_SHORT).show()
-            }
-        )
 
-        queue.add(stringRequest)
     }
     private fun loginHandler(){
         username = usernameView.text.toString()

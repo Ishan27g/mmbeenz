@@ -3,7 +3,8 @@
     package="com.example.mmbeenz">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -13,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MMbeenz"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UserProfile"></activity>
+        <activity android:name=".UserProfile" />
         <activity android:name=".ImagePick" />
         <activity android:name=".HomeActivity" />
         <activity

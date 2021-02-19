@@ -5,27 +5,23 @@
     android:layout_height="wrap_content"
     android:layout_gravity="fill_vertical"
     android:orientation="vertical"
-    tools:context=".UserProfile"
-    android:layout_marginTop="60dp"
-    android:layout_marginHorizontal="20dp">
+    tools:context=".UserProfile">
 
         <ImageView
             android:id="@+id/user_profile_image_view"
-            android:layout_width="300dp"
-            android:layout_height="250dp"
-            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="420dp"
             android:layout_gravity="center"
-            />
+            tools:srcCompat="@tools:sample/avatars" />
+
 
         <TextView
             android:id="@+id/user_profile_name_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="asdasdsfsdaf"
-            android:textSize="22sp"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            android:padding="8dp"
+            android:layout_marginTop="60dp"
             style="@style/ContentStyle" />
 
         <RatingBar
