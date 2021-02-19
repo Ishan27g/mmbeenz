@@ -15,12 +15,14 @@ class HomeActivity : AppCompatActivity() {
 
     var allUsers= mutableListOf<UserItem>()
 
+    lateinit var currUser: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.home_activity)
         supportActionBar?.hide()
 
-        val username = intent.getStringExtra("username").toString()
+        currUser = intent.getStringExtra("username").toString()
         val password = intent.getStringExtra("password").toString()
         val userRecyclerView = findViewById<RecyclerView>(R.id.user_recycler_view)
 
@@ -50,7 +52,7 @@ class HomeActivity : AppCompatActivity() {
         {
             override fun getHeaders(): MutableMap<String, String> {
                 val params = HashMap<String, String>()
-                val cred = String.format("%s:%s", username,password)
+                val cred = String.format("%s:%s", currUser,password)
                 val auth = "Basic " + Base64.encodeToString(cred.toByteArray(), Base64.DEFAULT)
                 params["Authorization"] = auth
                 return params
@@ -64,9 +66,8 @@ class HomeActivity : AppCompatActivity() {
     private fun parseToUserObject(response: JSONArray): Boolean{
         for (i in 0 until response.length()){
             val user = response.getJSONObject(i)
-
-
-            allUsers.add(UserItem(user.optString("username"), user.getInt("rating")))
+            val thisUser = user.optString("username") //don't display profile for current User
+            if(thisUser.compareTo(currUser) != 0) allUsers.add(UserItem(user.optString("username"), user.getInt("rating")))
         }
         return (allUsers.size > 0)
     }

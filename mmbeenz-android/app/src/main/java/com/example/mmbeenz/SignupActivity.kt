@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Base64
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -21,6 +22,7 @@ import org.json.JSONArray
 import java.security.MessageDigest
 
 class SignupActivity : AppCompatActivity() {
+
 
     lateinit var signupBtn: Button
     lateinit var loginBtn: Button
@@ -52,11 +54,13 @@ class SignupActivity : AppCompatActivity() {
         username = usernameView.text.toString()
         password = passwordView.text.toString()//.sha512()
 
-
-
         // Hide the keyboard.
         hideKeyboard(currentFocus ?: View(this))
-
+/*
+        var imageIntent = Intent(Intent.ACTION_GET_CONTENT);
+        imageIntent.type = "image/*"
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST)
+ */*/
         var queue= Volley.newRequestQueue(this)
         val host ="http://10.0.2.2:7000"
 
@@ -93,12 +97,6 @@ class SignupActivity : AppCompatActivity() {
     private fun clearText(){
         usernameView.setText("")
         passwordView.setText("")
-    }
-    private fun getUsername(): String? {
-       return username
-    }
-    private fun getPassword(): String? {
-        return password
     }
     private fun Context.hideKeyboard(view: View) {
         val inputMethodManager = getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager

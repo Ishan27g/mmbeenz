@@ -2,6 +2,7 @@ package com.example.mmbeenz
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 
 class UserActivity : AppCompatActivity() {
 
@@ -13,6 +14,6 @@ class UserActivity : AppCompatActivity() {
 
 
     }
-
 }
+
 

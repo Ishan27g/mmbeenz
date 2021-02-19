@@ -1,8 +1,9 @@
 package com.mmb
 
+import java.io.File
 import kotlin.math.roundToInt
 
-class User (val username: String, var password: String){
+class User (val username: String, var password: String, var img : File){
     private var rating: Float = 0F//2.51f
     var tempRating = mutableListOf<Float>()
 
@@ -25,8 +26,8 @@ class User (val username: String, var password: String){
 
 open class UserList(){
     private var list = hashMapOf<String, User>()
-    fun addUser(username: String, password: String){
-        var newUser = User(username, password)
+    fun addUser(username: String, password: String, img: File){
+        var newUser = User(username, password, img)
         list[username] = newUser
     }
     fun rateUser(username: String, rating: Int): Boolean{
@@ -60,10 +61,11 @@ open class UserList(){
             return (1..5).shuffled().first()
         }
         for (name in names){
-            addUser(name, "password")
+            addUser(name, "password", File("") )
             var i=0
-            while (i++ < 10){
-                rateUser(name, getRandomRating())
+            var random = getRandomRating() * getRandomRating()
+            while (i++ < 10 + random){
+               rateUser(name, getRandomRating())
             }
         }
 

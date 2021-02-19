@@ -10,7 +10,9 @@ import io.ktor.routing.*
 import io.ktor.http.*
 import io.ktor.auth.*
 import io.ktor.gson.*
+import io.ktor.http.ContentDisposition.Companion.File
 import io.ktor.http.content.*
+import java.io.File
 import java.security.MessageDigest
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
@@ -67,8 +69,27 @@ fun Application.module() {
             val userName: String? = call.request.queryParameters["username"]
             val password: String? = call.request.queryParameters["password"]
             if (userName != null && password != null) {
-                allUser.addUser(userName, password)
-                call.respond(HttpStatusCode.Created)
+                val mp = call.receiveMultipart()
+                var img = File("")
+                var res = false
+                mp.forEachPart { part ->
+                    if (part is PartData.FileItem) {
+                        val path = System.getProperty("user.dir")
+                        img = File("$path/resources/profiles/$userName.png")
+                        part.streamProvider().use { its ->
+                            // copy the stream to the file with buffering
+                            img.outputStream().buffered().use {
+                                its.copyTo(it)
+                                res = true
+                            }
+                        }
+                    }
+                    part.dispose()
+                }
+                if (res) {
+                    allUser.addUser(userName, password, img)
+                    call.respond(HttpStatusCode.Created)
+                } else call.respond(HttpStatusCode.BadRequest)
             } else call.respond(HttpStatusCode.BadRequest)
         }
         authenticate("basicAuth") {
@@ -101,6 +122,7 @@ fun Application.module() {
                         call.respond(mapOf("error" to "user not rated"))
                 } else call.respond(mapOf("error" to "user/rating param not found"))
             }
+
 
         }
     }
