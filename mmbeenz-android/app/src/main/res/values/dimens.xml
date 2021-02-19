@@ -14,4 +14,5 @@
     <dimen name="genericTextSize">22sp</dimen>
     <dimen name="ImagePadding">8dp</dimen>
     <dimen name="image_margin">5dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
