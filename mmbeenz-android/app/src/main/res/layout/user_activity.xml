@@ -8,6 +8,7 @@
     tools:context=".UserActivity"
     >
 
+
     <RelativeLayout
         android:id="@+id/user_card"
         android:layout_width="match_parent"
