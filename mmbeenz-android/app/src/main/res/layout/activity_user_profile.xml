@@ -2,10 +2,14 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_gravity="fill_vertical"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context=".UserProfile">
+    tools:context=".UserProfile"
+    android:background="@drawable/app_background"
+
+    >
 
         <ImageView
             android:id="@+id/user_profile_image_view"
@@ -19,9 +23,8 @@
             android:id="@+id/user_profile_name_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="asdasdsfsdaf"
+            android:text="Username"
             android:layout_gravity="center"
-            android:layout_marginTop="60dp"
             style="@style/ContentStyle" />
 
         <RatingBar
@@ -30,20 +33,23 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:isIndicator="false"
+            android:layout_marginTop="40dp"
             android:paddingVertical="8dp"
             android:numStars="5"
             android:maxHeight="50dp"
             style="@style/CustomRating"
             />
+
         <TextView
             android:id="@+id/user_profile_submit"
+            style="@style/ContentStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit rating"
-            android:textSize="18sp"
             android:layout_gravity="center"
+            android:layout_marginTop="120dp"
             android:clickable="true"
-            style="@style/ContentStyle" />
+            android:text="@string/submit_rating"
+            android:textSize="18sp" />
 </LinearLayout>
 
 
