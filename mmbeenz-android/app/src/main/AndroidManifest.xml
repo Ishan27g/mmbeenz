@@ -14,19 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MMbeenz"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UserProfile" />
-        <activity android:name=".ImagePick" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".UserProfile"
+            android:theme="@style/Theme.MMbeenz.NoActionBar"/>
+        <activity android:name=".ImagePick"
+            android:theme="@style/Theme.MMbeenz.NoActionBar"/>
+        <activity android:name=".HomeActivity"
+            android:theme="@style/Theme.MMbeenz.NoActionBar"/>
+
         <activity
             android:name=".UserActivity"
             android:label="UserActivity"
             android:theme="@style/Theme.MMbeenz.NoActionBar" />
         <activity
             android:name=".SignupActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:windowSoftInputMode="adjustResize"
+            android:theme="@style/Theme.MMbeenz.NoActionBar">
+        </activity>
+        <activity
+            android:name=".InitAppPage"
+            android:theme="@style/Theme.MMbeenz.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

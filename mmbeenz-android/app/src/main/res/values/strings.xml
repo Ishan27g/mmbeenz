@@ -49,4 +49,5 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="upload_image">upload image</string>
     <string name="select_avatar">Select Avatar</string>
+    <string name="submit_rating">Submit rating</string>
 </resources>

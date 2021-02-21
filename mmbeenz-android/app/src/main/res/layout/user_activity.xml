@@ -5,15 +5,16 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="4dp"
-    tools:context=".UserActivity">
+    tools:context=".UserActivity"
+    >
+
 
     <RelativeLayout
         android:id="@+id/user_card"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="8dp"
-        >
-
+        android:background="@drawable/usercard_bg">
         <ImageView
             android:id="@+id/user_image_view"
             android:layout_width="100dp"
@@ -38,6 +39,7 @@
             android:layout_marginStart="70dp"
             android:layout_toEndOf="@+id/user_name_view"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:text="ok"/>
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
